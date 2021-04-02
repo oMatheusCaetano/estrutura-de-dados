@@ -126,7 +126,7 @@ Resultado final: [2, 3, 4, 5, 7]
  ```
 
 ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Insertion Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/InsertionSort.java)
 
 ### Pseudo Código
 ```
@@ -344,7 +344,7 @@ Resultado Final: [2, 3, 4, 5, 7]
  ```
 
  ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Selection Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/SelectionSort.java)
 
 ### Pseudo Código
 ```
@@ -645,7 +645,7 @@ Resultado Final: [2, 3, 4, 5, 7]
  ```
 
 ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Bubble Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/BubbleSort.java)
 
 ### Pseudo Código
 ```
@@ -817,7 +817,7 @@ Resultado Final: [2, 3, 4, 5, 7]
 ```
 
 ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Shell Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/ShellSort.java)
 
 ### Pseudo Código
 ```
@@ -874,7 +874,7 @@ end
 <br><br>
 
 ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Quick Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/QuickSort.java)
 
 
 # Merge Sort
@@ -894,4 +894,4 @@ end
 <br><br>
 
 ## Implementação
-- [Implementação em JAVA](www.google.com)
+- [Merge Sort: Implementação em JAVA](https://github.com/oMatheusCaetano/estrutura-de-dados/blob/master/algoritmosOrdenacao/MergeSort.java)

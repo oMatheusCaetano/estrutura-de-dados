@@ -670,3 +670,177 @@ begin
   end;
 end
 ```
+
+<br><br><br><br>
+
+# Shell Sort
+<img src="https://aaronoah.gitbooks.io/algorithm-cracker/content/images/shell_sort_gap_4.jpg">
+
+<br><br>
+
+- Boa escolha para massas de dados médias ou pequenas.
+- Melhoria do algoritmo Insertion Sort
+- Diferentemente do Insertion Sort, não trabalha com elementos adjacestes, mas com saltos entre elementos.
+- Troca os elementos que estão distantes uns dos outros.
+- A massa de dados é dividida com base em um vetor de incremento h.
+- Os itens quye estão separados h posições são agrupadis em seguimentos e ordenados po Isertion sort separadamente.
+- No passo seguinte o incremento h é diminuido.
+- No último passo, h = 1.
+- A otimização do algoritmo depende do calculo para encontrar o valor de h.
+
+ **Tipo**: Algoritmo Complexo <br>
+ **Estabilidade**: Algoritmo instável <br>
+ **Ordenação**: Ordenação Interna <br>
+ **Complexidade**: Não possui uma complexidade assintótica definida <br>
+
+### Passo a passo da ordenação.
+ - Massa de dados está desordenada
+ ```
+Resultado: [5, 3, 2, 4, 7]
+ ```
+<br>
+
+- Define-se o valor de h: ``2 (Tamanho da massa / 2)``
+- Define o primeiro valor a ser comparado: ``2(array[h])``.
+- Define o segundo valor da ser comparado: ``3(array[0])``.
+- Compara se o ``2(array[h])`` é menor que o ``3(array[0])``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+h: 2
+Array: [2, 5, 3, 4, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``4(array[3](posição anterior + 1))``.
+- Define o segundo valor da ser comparado: ``5(array[1](posição anterior + 1))``.
+- Compara se o ``4(array[3])`` é menor que o ``5(array[1])``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+h: 2
+Array: [2, 4, 3, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``7(array[4](posição anterior + 1))``.
+- Define o segundo valor da ser comparado: ``3(array[2](posição anterior + 1))``.
+- Compara se o ``7(array[4])`` é menor que o ``3(array[2])``
+- Neste caso a comparação é FALSA, então nada é feito.
+
+ ```
+h: 2
+Array: [2, 4, 3, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[2](posição anterior - h))``.
+- Define o segundo valor da ser comparado: ``2((array[2](posição anterior - h))``.
+- Compara se o ``3(array[2])`` é menor que o ``2(array[0])``
+- Neste caso a comparação é FALSA, então nada é feito.
+- Retorna o primeiro valor para o estado anterior: ``7(array[4])``.
+- Retorna o segundo valor para o estado anterior: ``3(array[2])``.
+
+ ```
+h: 2
+Array: [2, 4, 3, 5, 7]
+ ```
+
+<br>
+
+- Define-se o valor de h: ``1 (h / 2)``
+- Define o primeiro valor a ser comparado: ``4(array[h])``.
+- Define o segundo valor da ser comparado: ``2(array[0])``.
+- Compara se o ``4(array[h])`` é menor que o ``2(array[0])``
+- Neste caso a comparação é FALSA, então nada é feito.
+
+ ```
+h: 1
+Array: [2, 4, 3, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[2](posição anterior + 1))``.
+- Define o segundo valor da ser comparado: ``4(array[1])``.
+- Compara se o ``3(array[2])`` é menor que o ``4(array[1])``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+
+ ```
+h: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[1](posição anterior - h))``.
+- Define o segundo valor da ser comparado: ``2((array[0](posição anterior - h))``.
+- Compara se o ``3(array[1])`` é menor que o ``2(array[0])``
+- Neste caso a comparação é FALSA, então nada é feito.
+- Retorna o primeiro valor para o estado anterior: ``4(array[2])``.
+- Retorna o segundo valor para o estado anterior: ``3(array[1])``.
+
+ ```
+h: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3](posição anterior + 1))``.
+- Define o segundo valor da ser comparado: ``4(array[2](posição anterior + 1))``.
+- Compara se o ``5(array[3])`` é menor que o ``4(array[2])``
+- Neste caso a comparação é FALSA, então nada é feito.
+
+
+ ```
+h: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``7(array[4](posição anterior + 1))``.
+- Define o segundo valor da ser comparado: ``5(array[3](posição anterior + 1))``.
+- Compara se o ``7(array[4])`` é menor que o ``5(array[3])``
+- Neste caso a comparação é FALSA, então nada é feito.
+- Algoritmo é encerrado pois não há mais posições na massa de dados para comparação e h = 1.
+
+```
+h: 1
+Resultado Final: [2, 3, 4, 5, 7]
+```
+
+## Implementação
+- [Implementação em JAVA](www.google.com)
+
+### Pseudo Código
+```
+procedure shellSort(var a: array[integer]; var h: array[integer]; n: integer; m: integer);
+var i:integer;
+var j:integer;
+var k:integer;
+var chave:integer;
+
+begin
+  do
+    for i = h[k] + 1 to n do
+    begin
+      chave = a[i];
+      j = i;
+      while (j - h[k] >= 0) and (a[j - h[k]] > chave) do
+      begin
+        a[j] = a[j - h[k]];
+        j = j - h[k];
+      end;
+      a[j] = chave;
+    end;
+    k = k + 1;
+  while k <= m
+end
+```

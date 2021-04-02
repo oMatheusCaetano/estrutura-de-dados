@@ -150,7 +150,225 @@ begin
 end
 ```
 
+<br><br><br><br>
+# Selection Sort
+<img src="https://lh3.googleusercontent.com/proxy/UWjw8YSpHa-Owjjz1H0eurr1UHZrGZCnCLaVzzWJBD30lZAXN5Zm5R9FxEvU_Gsdfuza3I4cAjvY7JbYo_jNi6C_C4OMzhUQZ3I81pfGQgm2UWjI-8YTBsQT8sbtQnjDEeubLzDNQq8">
 
+<br><br>
 
+- Considerado um algoritmo lento.
+- Possui baixa eficiência.
+- Procura-se o menor elemento dentro da massa de dados.
+- No primeiro passo, são feitas n - 1 comparações para determinar o menor valor.
+- No segundo passo, n - 2 comparações e assim sucessivamente.
+- Até que no último passo é efetuada apenas uma comparação.
+- Troca-se este elemento com o primeiro elemento da massa de dados.
+- **Não** indicado para grandes massas de dados.
+- Ordena através de sucessivas seleções do elemento de menor valor em uma massa de dados não-ordenado e seu posicionamento no final.
 
+ **Tipo**: Algoritmo Simples <br>
+ **Estabilidade**: Algoritmo instável <br>
+ **Ordenação**: Ordenação Interna <br>
+ **Complexidade Qualquer Caso**: O(N²) <br>
 
+ ### Passo a passo da ordenação.
+ - Massa de dados está desordenada
+ ```
+Resultado: [5, 3, 2, 4, 7]
+ ```
+<br>
+
+- Define-se a posição onde o elemento de menor valor será inserido: ``array[0]`` <br> ``Posição a ser preenchida: 0``.
+- Define um elemento inicial a ser definido como o elemento de menor valor: ``array[0]`` <br> ``Elemento de menor valor: 5``.
+- Define o elemento inicial a ser comparado com o ``5(Elemento de menor valor)``: ``array[1]`` <br> ``Elemento a ser comparado: 3``.
+ ```
+Posição a ser preenchida: 0
+Elemento de menor valor: 5
+Elemento a ser comparado: 3
+Array: [5, 3, 2, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``3(Elemento a ser comparado)`` é menor que o ``5(Elemento de menor valor)``
+- Neste caso a comparação é VERDADEIRA então o elemento de menor valor passa a ser o ``3(Elemento a ser comparado)``
+- Define o próximo elemento a ser comparado com o ``3(Elemento de menor valor)``: ``array[2]`` <br> ``Elemento a ser comparado: 2``.
+- 
+ ```
+Posição a ser preenchida: 0
+Elemento de menor valor: 3
+Elemento a ser comparado: 2
+Array: [5, 3, 2, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``2(Elemento a ser comparado)`` é menor que o ``3(Elemento de menor valor)``
+- Neste caso a comparação é VERDADEIRA então o elemento de menor valor passa a ser o ``2(Elemento a ser comparado)``
+- Define o próximo elemento a ser comparado com o ``2(Elemento de menor valor)``: ``array[3]`` <br> ``Elemento a ser comparado: 4``.
+- 
+ ```
+Posição a ser preenchida: 0
+Elemento de menor valor: 2
+Elemento a ser comparado: 4
+Array: [5, 3, 2, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``4(Elemento a ser comparado)`` é menor que o ``2(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Define o próximo elemento a ser comparado com o ``2(Elemento de menor valor)``: ``array[4]`` <br> ``Elemento a ser comparado: 7``.
+- 
+ ```
+Posição a ser preenchida: 0
+Elemento de menor valor: 2
+Elemento a ser comparado: 7
+Array: [5, 3, 2, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``7(Elemento a ser comparado)`` é menor que o ``2(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Como não há mais elementos da massa de dados a serem comparados, o ``2(Elemento de menor valor)`` troca de posição com o ``5(Elemento na posição a ser preenchida)``
+- 
+ ```
+Resultado: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Define-se a posição onde o elemento de menor valor será inserido: ``array[1]`` <br> ``Posição a ser preenchida: 1``.
+- Define um elemento inicial a ser usado como o elemento de menor valor: ``array[1]`` <br> ``Elemento de menor valor: 3``.
+- Define o elemento inicial a ser comparado com o ``3(Elemento de menor valor)``: ``array[2]`` <br> ``Elemento a ser comparado: 5``.
+ ```
+Posição a ser preenchida: 1
+Elemento de menor valor: 3
+Elemento a ser comparado: 5
+Array: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``5(Elemento a ser comparado)`` é menor que o ``3(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Define o próximo elemento a ser comparado com o ``3(Elemento de menor valor)``: ``array[3]`` <br> ``Elemento a ser comparado: 4``.
+- 
+ ```
+Posição a ser preenchida: 1
+Elemento de menor valor: 3
+Elemento a ser comparado: 4
+Array: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``4(Elemento a ser comparado)`` é menor que o ``3(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Define o próximo elemento a ser comparado com o ``3(Elemento de menor valor)``: ``array[4]`` <br> ``Elemento a ser comparado: 7``.
+- 
+ ```
+Posição a ser preenchida: 1
+Elemento de menor valor: 3
+Elemento a ser comparado: 7
+Array: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``7(Elemento a ser comparado)`` é menor que o ``3(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Como não há mais elementos da massa de dados a serem comparados, e o ``3(Elemento de menor valor)`` já está na posição a ser preenchida nada acontece.
+- 
+ ```
+Resultado: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Define-se a posição onde o elemento de menor valor será inserido: ``array[2]`` <br> ``Posição a ser preenchida: 2``.
+- Define um elemento inicial a ser utilizado como o elemento de menor valor: ``array[2]`` <br> ``Elemento de menor valor: 5``.
+- Define o elemento inicial a ser comparado com o ``5(Elemento de menor valor)``: ``array[3]`` <br> ``Elemento a ser comparado: 4``.
+ ```
+Posição a ser preenchida: 2
+Elemento de menor valor: 5
+Elemento a ser comparado: 4
+Array: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``4(Elemento a ser comparado)`` é menor que o ``4(Elemento de menor valor)``
+- Neste caso a comparação é VERDADEIRA então o elemento de menor valor passa a ser o ``4(Elemento a ser comparado)``
+- Define o próximo elemento a ser comparado com o ``4(Elemento de menor valor)``: ``array[4]`` <br> ``Elemento a ser comparado: 7``.
+- 
+ ```
+Posição a ser preenchida: 2
+Elemento de menor valor: 4
+Elemento a ser comparado: 7
+Array: [2, 3, 5, 4, 7]
+ ```
+
+<br>
+
+- Compara se o ``7(Elemento a ser comparado)`` é menor que o ``4(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Como não há mais elementos da massa de dados a serem comparados, o ``4(Elemento de menor valor)`` troca de posição com o ``5(Elemento na posição a ser preenchida)``
+- 
+ ```
+Resultado: [2, 3, 4, 5, 7]
+ ```
+
+ <br>
+
+- Define-se a posição onde o elemento de menor valor será inserido: ``array[3]`` <br> ``Posição a ser preenchida: 3``.
+- Define um elemento inicial a ser utilizado como o elemento de menor valor: ``array[3]`` <br> ``Elemento de menor valor: 5``.
+- Define o elemento inicial a ser comparado com o ``5(Elemento de menor valor)``: ``array[4]`` <br> ``Elemento a ser comparado: 7``.
+ ```
+Posição a ser preenchida: 3
+Elemento de menor valor: 5
+Elemento a ser comparado: 7
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Compara se o ``7(Elemento a ser comparado)`` é menor que o ``5(Elemento de menor valor)``
+- Neste caso a comparação é FALSA então nada acontece.
+- Como não há mais elementos da massa de dados a serem comparados, e o ``5(Elemento de menor valor)`` já está na posição a ser preenchida nada acontece.
+- Como não há mais posições na massa de dados a serem comparadas, chega-se ao resultado final.
+
+ ```
+Resultado Final: [2, 3, 4, 5, 7]
+ ```
+
+ ## Implementação
+- [Implementação em JAVA](www.google.com)
+
+### Pseudo Código
+```
+procedure selectionSort(var a: array[integer]; n: integer);
+var i:integer;
+var j:integer;
+var min:integer;
+var aux:integer;
+
+begin
+  for i = 1 to n - 1 do
+  begin
+    min = i;
+    for j = i + 1 to n  do
+    begin
+      if a[j] < a [min]
+      then
+        min = j;
+    end;
+    aux = a[min];
+    a[min] = a[i];
+    a[i] = aux;
+  end;
+end
+```
+
+<br><br><br><br>

@@ -97,3 +97,5 @@ Julgue o item acima como verdadeiro ou falso. Justifique sua resposta.
 
 ## Resposta
 - Incorreto. O algoritmo O(N²) apesar de lento, ainda será superior ao O(N³) pois para o primeiro serão executadas N² operações para cada elemento da massa de dados enquanto que no segundo serão executadas N³ operações para cada elemento da massa de dados.
+
+<br><br>

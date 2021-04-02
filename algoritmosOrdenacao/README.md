@@ -44,15 +44,22 @@ Obs: Alguns autores utilizam ordenação de vetores (Ordenação interna) e orde
 # Insertion Sort
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/insertionsort.png">
 
+<br><br>
+
+- Considerado um algoritmo lento.
+- Possui baixa eficiência.
+- **Não** indicado para grandes massas de dados.
 - Similar a ordenação de cartas em um baralho.
 - Realiza a comparação de dois elementos e se o primeiro for maior que o segundo, realiza a comparação dos elementos anteriores ao primeiro até encontrar um elemento anterior menor que o segundo.
 - É feita uma única passagem, mas com vários retornos.
 - O procedimento é encerrado quando ordena-se o elemento da última posição do vetor.
 
  **Tipo**: Algoritmo Simples <br>
- **Estabilidade**: Algoritmos estáveis <br>
+ **Estabilidade**: Algoritmo estável <br>
  **Ordenação**: Ordenação Interna <br>
- **Complexidade**: O(N²) <br>
+ **Complexidade Pior Caso**: O(N²) <br>
+ **Complexidade Médio Caso**: O(N²) <br>
+ **Complexidade Melhor Caso**: O(N) <br>
 
  ### Passo a passo da ordenação.
  - Massa de dados está desordenada
@@ -119,7 +126,7 @@ Resultado final: [2, 3, 4, 5, 7]
  ```
 
 ## Implementação
-[Implementação em JAVA](www.google.com)
+- [Implementação em JAVA](www.google.com)
 
 ### Pseudo Código
 ```

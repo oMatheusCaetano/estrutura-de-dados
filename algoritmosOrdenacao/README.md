@@ -872,3 +872,26 @@ end
  **Complexidade Pior Caso**: O(N²)  <br>
 
 <br><br>
+
+## Implementação
+- [Implementação em JAVA](www.google.com)
+
+
+# Merge Sort
+<img src="https://miro.medium.com/max/661/1*7Kox4Bll0Ddvb0td1tiXsg.png">
+
+<br><br>
+
+- Utiliza o principio de divisão para conquista.
+- Consiste em dividir recursivamente a massa de dados até chegar em uma unidade e depois voltar intercalando os dados para obter a massa ordenada.
+- Não lida com elementos adjacentes.
+
+ **Tipo**: Algoritmo Complexo <br>
+ **Estabilidade**: Algoritmo instável <br>
+ **Ordenação**: Ordenação externa <br>
+ **Complexidade Qualquer Caso**: O(N log N)  <br>
+
+<br><br>
+
+## Implementação
+- [Implementação em JAVA](www.google.com)

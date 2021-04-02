@@ -844,3 +844,31 @@ begin
   while k <= m
 end
 ```
+
+<br><br><br><br>
+
+# Quick Sort
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--wwfJBPCm--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/3odpn7gl8myiqx7rto4f.png">
+
+<br><br>
+
+- Muito rápido em média, mas lento no pior caso.
+- Este é um algoritmo muito bom pios nunca se lida com toda a massa de dados de uma vez.
+- Considerado o mais rápido (desconsiderando o pior caso).
+- Algoritmo de ordenação mais utilizado.
+- Busca dividir o problema de ordenar um conjunto de n items em dois vetores.
+- Orderar independentemente os problemas menores.
+- Combinar os resultados para produzir a solução do problema maior
+- A parte mais delicada está na divisão das partições. O ponto do parttida para a solução do subproblema é  escolha de um pivô.
+- Os elementos da massa de dados são movimentados de forma que a submassa à esquerda do pivô contenha somente os elementos cujo valor é menor que o valor do pivô e a submassa da direita contenha valores maiors que o valor do pivô.
+- O procedimento é repetido nos segmentos 1 e 3 e assim por diante até que o vetor esteja ordenado.
+- Será executado recusivamente em cada segmento.
+- A escolha do pivô pode ser feita de várias formas.
+
+ **Tipo**: Algoritmo Complexo <br>
+ **Estabilidade**: Algoritmo instável <br>
+ **Ordenação**: Ordenação Interna <br>
+ **Complexidade Média**: O(N log N)  <br>
+ **Complexidade Pior Caso**: O(N²)  <br>
+
+<br><br>

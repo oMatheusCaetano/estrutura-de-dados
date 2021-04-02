@@ -372,3 +372,301 @@ end
 ```
 
 <br><br><br><br>
+# Bubble Sort
+<img src="https://cdn.programiz.com/sites/tutorial2program/files/Bubble-sort-0.png">
+
+<br><br>
+
+- Considerado um algoritmo lento.
+- Possui baixa eficiência.
+- **Não** indicado para grandes massas de dados.
+- Ordena através de sucessivas trocas entre pares de elementos da massa de dados.
+- O nome bolha se deve ao fato de que os valores flutuam até a sua posição correta como bolhas.
+- Realiza varreduras na massa de daddos, trocando pares adjacentes de elementos sempre que o próximo elemento for menor que o anterior.
+- Após a varredura o maior elemento está corretamente posicionado no vetor e não precisa mais ser comparado.
+- Após a i-ésima varreduta os i maiores elementos estão ordenados
+- Para um vetor de n elementos, n - 1 iterações são feitas para acertar todos os elementos.
+
+ **Tipo**: Algoritmo Simples <br>
+ **Estabilidade**: Algoritmo estável <br>
+ **Ordenação**: Ordenação Interna <br>
+ **Complexidade Qualquer Caso**: O(N²) <br>
+
+### Passo a passo da ordenação.
+ - Massa de dados está desordenada
+ ```
+Resultado: [5, 3, 2, 4, 7]
+ ```
+<br>
+
+- Define-se a quantidade de vezes que a massa de dados deverá ser percorrida: ``4`` (Tamanho da massa de dados - 1). <br> ``Iterações restantes: 5``
+- Define o primeiro valor a ser comparado: ``5(array[0])``.
+- Define o segundo valor da ser comparado: ``3(array[1])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``3(segundo valor a ser comparado)``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+Iterações restantes: 4
+Array: [3, 5, 2, 4, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[1])``.
+- Define o segundo valor da ser comparado: ``2(array[2])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``2(segundo valor a ser comparado)``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+Iterações restantes: 4
+Array: [3, 2, 5, 4, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[2])``.
+- Define o segundo valor da ser comparado: ``5(array[3])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``4(segundo valor a ser comparado)``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+Iterações restantes: 4
+Array: [3, 2, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3])``.
+- Define o segundo valor da ser comparado: ``7(array[4])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``7(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 4
+Resultado: [3, 2, 4, 5, 7]
+ ```
+
+<br>
+
+- Define-se a quantidade de vezes que a massa de dados deverá ser percorrida: ``3`` (Quantidade anterior - 1). <br> ``Iterações restantes: 3``
+- Define o primeiro valor a ser comparado: ``3(array[0])``.
+- Define o segundo valor da ser comparado: ``2(array[1])``.
+- Compara se o ``3(primeiro valor a ser comparado)`` é maior que o ``2(segundo valor a ser comparado)``
+- Neste caso a comparação é VERDADEIRA, então os elementos são trocados.
+
+ ```
+Iterações restantes: 3
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[1])``.
+- Define o segundo valor da ser comparado: ``4(array[2])``.
+- Compara se o ``3(primeiro valor a ser comparado)`` é maior que o ``2(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 3
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``4(array[2])``.
+- Define o segundo valor da ser comparado: ``5(array[3])``.
+- Compara se o ``4(primeiro valor a ser comparado)`` é maior que o ``5(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 3
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3])``.
+- Define o segundo valor da ser comparado: ``7(array[4])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``7(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 3
+Array: [2, 3, 4, 5, 7]
+ ```
+
+ OBS: Repare que neste ponto a massa de dados já está ordenada, mesmo assim ainda faltam 3 iterações restantes.
+
+
+<br>
+
+- Define-se a quantidade de vezes que a massa de dados deverá ser percorrida: ``2`` (Quantidade anterior - 1). <br> ``Iterações restantes: 2``
+- Define o primeiro valor a ser comparado: ``2(array[0])``.
+- Define o segundo valor da ser comparado: ``3(array[1])``.
+- Compara se o ``2(primeiro valor a ser comparado)`` é maior que o ``3(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 2
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[1])``.
+- Define o segundo valor da ser comparado: ``4(array[2])``.
+- Compara se o ``3(primeiro valor a ser comparado)`` é maior que o ``4(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 2
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``4(array[2])``.
+- Define o segundo valor da ser comparado: ``5(array[3])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``5(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 2
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3])``.
+- Define o segundo valor da ser comparado: ``7(array[4])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``7(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 2
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define-se a quantidade de vezes que a massa de dados deverá ser percorrida: ``1`` (Quantidade anterior - 1). <br> ``Iterações restantes: 1``
+- Define o primeiro valor a ser comparado: ``2(array[0])``.
+- Define o segundo valor da ser comparado: ``3(array[1])``.
+- Compara se o ``2(primeiro valor a ser comparado)`` é maior que o ``3(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[1])``.
+- Define o segundo valor da ser comparado: ``4(array[2])``.
+- Compara se o ``3(primeiro valor a ser comparado)`` é maior que o ``4(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``4(array[2])``.
+- Define o segundo valor da ser comparado: ``5(array[3])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``5(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3])``.
+- Define o segundo valor da ser comparado: ``7(array[4])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``7(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 1
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define-se a quantidade de vezes que a massa de dados deverá ser percorrida: ``0`` (Quantidade anterior - 1). <br> ``Iterações restantes: 0``
+- Define o primeiro valor a ser comparado: ``2(array[0])``.
+- Define o segundo valor da ser comparado: ``3(array[1])``.
+- Compara se o ``2(primeiro valor a ser comparado)`` é maior que o ``3(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 0
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``3(array[1])``.
+- Define o segundo valor da ser comparado: ``4(array[2])``.
+- Compara se o ``3(primeiro valor a ser comparado)`` é maior que o ``4(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 0
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``4(array[2])``.
+- Define o segundo valor da ser comparado: ``5(array[3])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``5(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Iterações restantes: 0
+Array: [2, 3, 4, 5, 7]
+ ```
+
+<br>
+
+- Define o primeiro valor a ser comparado: ``5(array[3])``.
+- Define o segundo valor da ser comparado: ``7(array[4])``.
+- Compara se o ``5(primeiro valor a ser comparado)`` é maior que o ``7(segundo valor a ser comparado)``
+- Neste caso a comparação é FALSA, então nada acontece.
+
+ ```
+Resultado Final: [2, 3, 4, 5, 7]
+ ```
+
+## Implementação
+- [Implementação em JAVA](www.google.com)
+
+### Pseudo Código
+```
+procedure bubbleSort(var a: array[integer]; n: integer);
+var i:integer;
+var j:integer;
+var temp:integer;
+
+begin
+  for i = 0 to n do
+  begin
+    for j = 0 to n - 1  do
+    begin
+      if a[j] > a[j + 1]
+      then
+      begin
+        temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+      end;
+    end;
+  end;
+end
+```

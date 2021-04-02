@@ -18,6 +18,8 @@ busca.
 - **B:** O(n), em caso de busca sequencial.
 - Letra B pois o algoritmo irá verificar cada item da lista sequencialmente até encontrar o item desejado. Caso o item desejado seja o último da lista, ele irá realizar N verificações.
 
+<br><br>
+
 # 2
 Julgue os itens a seguir, acerca de algoritmos para ordenação.
 
@@ -43,6 +45,9 @@ Estão certos apenas os itens:
 - III - Verdadeiro.
 - IV - Falso. O Shell Sort não possui uma complexidade assintótica definida.
 
+
+<br><br>
+
 # 3
 Considere o algoritmo que implementa o seguinte processo: uma coleção desordenada de elementos é dividida em duas metades e cada metade é utilizada como argumento para a reaplicação recursiva do procedimento. Os resultados das duas reaplicações são, então, combinados pela intercalação dos elementos de ambas, resultando em uma coleção ordenada.
 
@@ -57,6 +62,8 @@ Qual é a complexidade desse algoritmo?
 - **E:** O(N log N)
 - Este algoritmo utiliza o conceito de divisão para conquista onde sempre irá dividir a massa de dados pela metade até que chegue unidades. Por causa desta divisão este é um algoritmo logarítmico. O mesmo conceito utilizado no Merge Sort.
 
+<br><br>
+
 # 5
 Explique o que é complexidade assintótica. Qual o impacto da complexidade assintótica de um algoritmo? O que quer dizer um algoritmo possui complexidade assintótica O(N) e O (N²) , explique a diferença.
 
@@ -64,6 +71,8 @@ Explique o que é complexidade assintótica. Qual o impacto da complexidade assi
 - Complexidade assintótica é a medição da complexidade de um algoritmo em seu pior caso e quando sua massa tende ao infinito. A complexidade permique que sejam realizadas comparações entre algoritmos de forma matemática.
 - Um algoritmo com complexidade O(N) irá executar N operações na massa de dados.
 - Um algoritmo com complexidade O(N²) irá executar N² operações para cada elemento na massa de dados.
+
+<br><br>
 
 # 6
 Tendo os seguintes cenários abaixo e os principais métodos de ordenação, associe os cenários aos métodos e justifique explicando o comportamento e a complexidade assintótica de cada algoritmo conhecendo o pior, o médio e o melhor caso para ordenar as massas de dados de forma crescente. Obs, você só pode usar cada algoritmo uma única vez, ou seja, tendo usado o mergesorte em um dos cenários não pode ser aplicado em outro.
@@ -78,6 +87,8 @@ Tendo os seguintes cenários abaixo e os principais métodos de ordenação, ass
 - **II:** Merge Sort: Por possuir uma complexidade O(N log N) em qualquer caso, será a melhor escolha para esta massa. O merge sort irá dividir recursivamente a massa de dados até que cheguem em unidades e isso o faz um algoritmo bem otimizado para este cenário.
 - **III:** Quick Sort: Apesar de possuir um pior caso de O(N²), este pior caso não deve acontecer neste cenário e por isso será o algoritmo mais rápido para resolver esta massa e deverá resolver com uma complexidade de O(N log N).
 - **IV:** Shell Sort: Apesar de não ser considerado uma método simples, sua implementação não é complexa e apesar de não ter uma complexidade assintótica definida o Shell Sort se saira bem superior ao Bubble Sort, Insertion Sort e Selection Sort.
+
+<br><br>
 
 # 11
 "Considerando dois algoritmos com tempo de execução O(N²) e O(N³) espera-se que o segundo seja mais eficiente que o primeiro." 

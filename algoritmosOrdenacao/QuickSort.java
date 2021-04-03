@@ -10,6 +10,12 @@ public class QuickSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação recursiva de uma lista em ordem crescente utilizando o
+  * algoritmo Quick Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list, int start, int end) {
     if (start >= end) return;
     int pivotIndex = separate(list, start, end);

@@ -10,6 +10,12 @@ public class ShellSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação recursiva de uma lista em ordem crescente utilizando o
+  * algoritmo Shell Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list) {
     int h = list.length / 2;
 

@@ -10,6 +10,12 @@ public class InsertionSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação de uma lista em ordem crescente utilizando o
+  * algoritmo Insertion Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list) {
     for (int i = 1; i < list.length; i++) {
       int key = list[i];

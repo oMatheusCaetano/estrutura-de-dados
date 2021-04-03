@@ -10,6 +10,12 @@ public class BubbleSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação de uma lista em ordem crescente utilizando o
+  * algoritmo Bubble Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list) {
     for (int i = 0; i < list.length; i++) {
       for (int j = 0; j < list.length - 1; j++) {

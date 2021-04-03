@@ -10,6 +10,12 @@ public class SelectionSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação recursiva de uma lista em ordem crescente utilizando o
+  * algoritmo Selection Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list) {
     for (int i = 0; i < list.length; i++) {
       int min = i;

@@ -10,6 +10,12 @@ public class MergeSort {
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
+  /**
+  * Realiza a ordenação recursiva de uma lista em ordem crescente utilizando o
+  * algoritmo Merge Sort.
+  *
+  * @param  list Lista que deve ser ordenada.
+  */
   public static void sort(int[] list, int start, int end) {
     if (start >= end) return;
     int middle = (start + end) / 2;
@@ -18,6 +24,9 @@ public class MergeSort {
     mix(list, start, middle, end);
   }
 
+  /**
+  * Reliza a intercalação dos elementos do merge sort
+  */
   public static void mix(int[] list, int start, int middle, int end) {
     int[] aux = new int[list.length];
 

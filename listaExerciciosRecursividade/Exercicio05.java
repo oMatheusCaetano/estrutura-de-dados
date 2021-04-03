@@ -2,13 +2,13 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 
 public class Exercicio05 {
   public static void main(String[] args) {
-    int number = Math.abs(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o número a ser calculado.")));
+    int number = Utilities.readIntWithPopUp("Digite o número a ser calculado.");
     int result = call(number);
-    JOptionPane.showMessageDialog(null, "O resultado é " + result);
+    Utilities.showPopUpMessage("O resultado é " + result);
   }
 
   public static int call(int number) {

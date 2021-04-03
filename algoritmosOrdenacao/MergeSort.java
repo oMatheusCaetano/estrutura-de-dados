@@ -1,11 +1,13 @@
 package algoritmosOrdenacao;
 
+import utils.Utilities;
+
 public class MergeSort {
   public static void main(String[] args) {
     int[] list = {5, 3, 2, 4, 7};
-    Utilities.showList("Lista Desordenada:", list);
+    Utilities.renderListOnConsole("Lista Desordenada:", list);
     sort(list, 0, list.length - 1);
-    Utilities.showList("Lista Ordenada:   ", list);
+    Utilities.renderListOnConsole("Lista Ordenada:   ", list);
   }
 
   public static void sort(int[] list, int start, int end) {

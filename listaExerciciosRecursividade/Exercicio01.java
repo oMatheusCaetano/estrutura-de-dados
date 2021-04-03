@@ -2,14 +2,14 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 
 public class Exercicio01 {
 
   public static void main(String[] args) {
-    int decimal = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o número de decimal a ser calculado"));
+    int decimal = Utilities.readIntWithPopUp("Digite o número de decimal a ser calculado");
     String binary = decimalToBinary(decimal);
-    JOptionPane.showMessageDialog(null, "O resultado é: " + binary);
+    Utilities.showPopUpMessage("O resultado é: " + binary);
   }
 
   public static String decimalToBinary(int decimal) {

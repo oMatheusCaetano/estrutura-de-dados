@@ -2,15 +2,15 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 
 public class Exercicio02 {
   
   public static void main(String[] args) {
-    int firstNumber  = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o primeiro número."));
-    int secondNumber = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o segundo número."));
-    int result = call(firstNumber, secondNumber);
-    JOptionPane.showMessageDialog(null, "O resultado é: " + result);
+    int firstNumber  = Utilities.readIntWithPopUp("Digite o primeiro número.");
+    int secondNumber = Utilities.readIntWithPopUp("Digite o segundo número.");
+    int result       = call(firstNumber, secondNumber);
+    Utilities.showPopUpMessage("O resultado é: " + result);
   }
 
   public static int call(int firstNumber, int secondNumber) {

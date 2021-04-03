@@ -4,14 +4,14 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 
 public class Exercicio06 {
   public static void main(String[] args) {
-    int k = Math.abs(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor de K.")));
-    int n = Math.abs(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor de N.")));
+    int k = Utilities.readIntWithPopUp("Digite o valor de K.");
+    int n = Utilities.readIntWithPopUp("Digite o valor de N.");
     int result = call(k, n);
-    JOptionPane.showMessageDialog(null, "O resultado é " + result);
+    Utilities.showPopUpMessage("O resultado é " + result);
   }
 
   public static int call(int k, int n) {

@@ -2,13 +2,13 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 
 public class Exercicio04 {
   public static void main(String[] args) {
-    String word = JOptionPane.showInputDialog(null, "Digite a palavra a ser verificada.");
+    String word = Utilities.readStringWithPopUp("Digite a palavra a ser verificada.");
     Boolean result = call(word);
-    JOptionPane.showMessageDialog(null, result ? "Esta palavra é um palíndromo" : "Esta palavra não é um palíndromo");
+    Utilities.showPopUpMessage(result ? "Esta palavra é um palíndromo" : "Esta palavra não é um palíndromo");
   }
 
   public static Boolean call(String word) {

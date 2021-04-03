@@ -3,7 +3,7 @@
 
 package listaExerciciosRecursividade;
 
-import javax.swing.JOptionPane;
+import utils.Utilities;
 import java.util.ArrayList;
 
 public class Exercicio07 {
@@ -12,12 +12,12 @@ public class Exercicio07 {
     ArrayList<Integer> array = new ArrayList<Integer>();
 
     while (stop != 0) {
-      array.add(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um número. Faltam [" + stop + "]")));
+      array.add(Utilities.readIntWithPopUp("Digite um número. Faltam [" + stop + "]"));
       stop--;
     }
 
     ArrayList<Integer> result = call(array);
-    JOptionPane.showMessageDialog(null, "O resultado é " + result);
+    Utilities.showPopUpMessage("O resultado é " + result);
   }
 
   public static ArrayList<Integer> call(ArrayList<Integer> array) {

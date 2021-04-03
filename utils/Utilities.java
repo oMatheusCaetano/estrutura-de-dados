@@ -13,7 +13,7 @@ public class Utilities {
   public static String getListAsString(int[] list) {
     String listAsString = "[";
     for (int i = 0; i < list.length; i++) {
-      listAsString += i == list.length - 1 ? list[i] : list[i] + ",";
+      listAsString += i == list.length - 1 ? list[i] : list[i] + ", ";
     }
     listAsString += "]";
     return listAsString;

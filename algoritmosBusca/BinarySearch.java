@@ -2,10 +2,10 @@ package algoritmosBusca;
 
 import utils.Utilities;
 
-public class LinearSearch {
+public class BinarySearch {
 
   public static void main(String[] args) {
-    int[] list = {4, 5, 8, 11, 56, 88, 1, 6, 89, 0, 111, 81, 7, 9, 5,};
+    int[] list = {4, 7, 8, 10, 14, 21, 22, 36, 62, 77, 81, 91, 100};
 
     int itemToSearch = Utilities.readIntWithPopUp("Informe o item a ser procurado na lista\n" + Utilities.getListAsString(list));
     int itemIndex = search(list, itemToSearch);
@@ -18,7 +18,7 @@ public class LinearSearch {
 
   /**
   * Realiza a busca de um número inteiro em um array de números inteiros.
-  * Utiliza o lógica de busca sequencial.
+  * Utiliza o lógica de busca binária.
   *
   * @param  list         Lista na qual número deve ser procurado.
   * @param  itemToSearch Número que deve ser procurado dentro da lista.
@@ -26,9 +26,19 @@ public class LinearSearch {
   *                      ou -1 caso o número não seja encontrado na lista.
   */
   public static int search(int[] list, int itemToSearch) {
-    for (int i = 0; i < list.length; i++) {
-      if (list[i] == itemToSearch) return i;
+    int middle        = 0;
+    int left          = 0;
+    int right         = list.length - 1;
+    Boolean itemFound = false;
+
+    while (left <= right && !itemFound) {
+      middle = (left + right) / 2;
+
+      if (list[middle] == itemToSearch) itemFound = true;
+      else if (list[middle] < itemToSearch) left = middle + 1;
+      else right = middle - 1;
     }
-    return -1;
+
+    return itemFound ? middle : -1;
   }
 }

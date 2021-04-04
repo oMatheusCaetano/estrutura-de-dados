@@ -36,8 +36,20 @@
 
 - **Problema**: Buscar um valor V não existente em uma lista sequencial ordenada com N elementos.
 
-**Complexidade Qualquer Caso**: O(log N)
+**Complexidade**: O(log N)
 
 ## Implementação
-- [Busca Sequencial: Implementação em JAVA]()
+- [Busca Binária: Implementação em JAVA]()
+
+# Busca Indexada
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/Screenshot-42-4.png">
+
+
+<br><br>
+- Neste caso tem-se duas estruturas (vetores, tabelas, arquivos, etc...).
+- Data uma estrutura B, representando uma tabela de dados e uma estrutura A, representando os índices relacionados à B.
+- A estrutura A(índice), contém a chave e o registro na estrutura B onde se encontram os dados relacionados com a chave em questão.
+- O acesso aos dados é feito através da estrutura de índice, que se encontra ordenada. Assim, a busca nesta estrutura pode ser feita de forma sequencial ou binária.
+- Após localizarmos a chave na estrutura de índice, podemos fazer acesso direto aos dados através do registro representando o local onde os dados estão armazenados na estrutura A.
 

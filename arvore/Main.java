@@ -5,7 +5,12 @@ public class Main {
     tree.insert(new Node(1));
     tree.insert(new Node(7));
     tree.insert(new Node(8));
+    tree.insert(new Node(10));
+    tree.insert(new Node(0));
+    tree.insert(new Node(5));
 
-    System.out.print(tree);
+    System.out.println();
+    tree.readPostOrder();
+    System.out.println();
   }
 }

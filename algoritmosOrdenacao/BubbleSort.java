@@ -4,7 +4,7 @@ import utils.Utilities;
 
 public class BubbleSort {
   public static void main(String[] args) {
-    int[] list = {5, 3, 2, 4, 7};
+    int[] list = {6, 9, 2, 8, 3, 4, 1, 0, 5};
     Utilities.renderListOnConsole("Lista Desordenada:", list);
     sort(list);
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);

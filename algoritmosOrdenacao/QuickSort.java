@@ -4,7 +4,7 @@ import utils.Utilities;
 
 public class QuickSort {
   public static void main(String[] args) {
-    int[] list = {5, 3, 2, 4, 7};
+    int[] list = {6, 9, 2, 8, 3, 4, 1, 0, 5};
     Utilities.renderListOnConsole("Lista Desordenada:", list);
     sort(list, 0, list.length - 1);
     Utilities.renderListOnConsole("Lista Ordenada:   ", list);
@@ -33,17 +33,34 @@ public class QuickSort {
       else if (list[right] > pivot) right--;
       else toggle(list, left, right);
     }
-
+    hasRepeated(list);
     list[start] = list[right];
     list[right] = pivot;
     return right;
   }
 
   public static void toggle(int[] list, int left, int right) {
+    hasRepeated(list);
     int aux = list[left];
     list[left] = list[right];
     list[right] = aux;
     left++;
     right--;
+  }
+
+  public static void hasRepeated(int[] list) {
+    Boolean r = false;
+
+    for (int i = 0; i < list.length; i++) {
+      for (int j = i + 1 ; j < list.length; j++) {
+           if (list[i] == list[j]) {
+            r = true;
+           }
+      }
+    }
+
+    if (!r) {
+      Utilities.renderListOnConsole("", list);
+    }
   }
 }

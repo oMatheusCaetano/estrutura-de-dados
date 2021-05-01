@@ -1,68 +1,102 @@
 public class BinaryTree {
-  private Node root;
+    private Node rootNode;
 
-  public BinaryTree(Node root) {
-    this.root = root;
-  }
-
-  /** PRE ORDER READING */
-  public void readPreOrder() {
-    this.readPreOrder(this.root);
-  }
-
-  private void readPreOrder(Node node) {
-    if (node != null) {
-      System.out.print(node.getValue() + " ");
-      this.readPreOrder(node.getLeft());
-      this.readPreOrder(node.getRight());
+    public BinaryTree(Node root) {
+        this.setRootNode(root);
     }
-  }
 
-  /** IN ORDER READING */
-  public void readInOrder() {
-    this.readInOrder(this.root);
-  }
-
-  private void readInOrder(Node node) {
-    if (node != null) {
-      this.readInOrder(node.getLeft());
-      System.out.print(node.getValue() + " ");
-      this.readInOrder(node.getRight());
+    private String concatNodeValueToString(Node node, String string) {
+        return string.length() == 0
+            ? string + node.getValue()
+            : string + ", " + node.getValue();
     }
-  }
 
-  /** POST ORDER READING */
-  public void readPostOrder() {
-    this.readPostOrder(this.root);
-  }
-
-  private void readPostOrder(Node node) {
-    if (node != null) {
-      this.readPostOrder(node.getLeft());
-      this.readPostOrder(node.getRight());
-      System.out.print(node.getValue() + " ");
+    /*
+    *--------------------------------------------------------------------------
+    * Insertion                                                               *
+    *--------------------------------------------------------------------------
+    */
+    public BinaryTree insert(Node node) {
+        return this.insert(this.getRootNode(), node);
     }
-  }
 
-  /** INSERTION */
-  public void insert(Node newNode) {
-    this.insert(this.root, newNode);
-  }
+    private BinaryTree insert(Node root, Node nodeToInsert) {
+        if (nodeToInsert.getValue() < root.getValue()) {
+            if (root.getLeftNode() == null) {
+                root.setLeftNode(nodeToInsert);
+                return this;
+            }
 
-  private void insert(Node node, Node newNode) {
-    if (newNode.getValue() < node.getValue())
-      this.insertLeft(node, newNode);
-    else
-      this.insertRight(node, newNode);
-  }
+            return insert(root.getLeftNode(), nodeToInsert);
+        }
 
-  private void insertLeft(Node node, Node newNode) {
-    if (node.getLeft() == null) node.setLeft(newNode);
-    else insert(node.getLeft(), newNode);
-  }
+        if (root.getRightNode() == null) {
+            root.setRightNode(nodeToInsert);
+            return this;
+        }
 
-  private void insertRight(Node node, Node newNode) {
-    if (node.getRight() == null) node.setRight(newNode);
-    else insert(node.getRight(), newNode);
-  }
+        return insert(root.getRightNode(), nodeToInsert);
+    }
+
+    /*
+    *--------------------------------------------------------------------------
+    * In Order Reading                                                        *
+    *--------------------------------------------------------------------------
+    */
+    public String inOrderReading() {
+        return this.inOrderReading(this.getRootNode(), "");
+    }
+
+    private String inOrderReading(Node root, String result) {
+        if (root == null) return result;
+        result = inOrderReading(root.getLeftNode(), result);
+        result = concatNodeValueToString(root, result);
+        return inOrderReading(root.getRightNode(), result);
+    }
+
+    /*
+    *--------------------------------------------------------------------------
+    * Pre Order Reading                                                       *
+    *--------------------------------------------------------------------------
+    */
+    public String preOrderReading() {
+        return this.preOrderReading(this.getRootNode(), "");
+    }
+
+    private String preOrderReading(Node root, String result) {
+        if (root == null) return result;
+        result = concatNodeValueToString(root, result);
+        result = preOrderReading(root.getLeftNode(), result);
+        return preOrderReading(root.getRightNode(), result);
+    }
+
+    /*
+    *--------------------------------------------------------------------------
+    * Post Order Reading                                                      *
+    *--------------------------------------------------------------------------
+    */
+    public String postOrderReading() {
+        return this.postOrderReading(this.getRootNode(), "");
+    }
+
+    private String postOrderReading(Node root, String result) {
+        if (root == null) return result;
+        result = postOrderReading(root.getLeftNode(), result);
+        result = postOrderReading(root.getRightNode(), result);
+        return concatNodeValueToString(root, result);
+    }
+
+    /*
+    *--------------------------------------------------------------------------
+    * Getters and Setters                                                     *
+    *--------------------------------------------------------------------------
+    */
+    public Node getRootNode() {
+        return this.rootNode;
+    }
+
+    public BinaryTree setRootNode(Node root) {
+        this.rootNode = root;
+        return this;
+    }
 }

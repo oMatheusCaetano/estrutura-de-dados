@@ -1,31 +1,36 @@
 public class Node {
-  private Node right;
-  private Node left;
-  private int value;
+    private Node leftNode;
+    private Node rightNode;
+    private int value;
 
-  public Node(int value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
+    public Node(int value) {
+        this.setValue(value);
+    }
 
-  /** GETTERS & SETTERS */
-  public Node getRight() { return this.right; }
-  public Node getLeft() { return this.left; }
-  public int getValue() { return this.value; }
+    public Node getLeftNode() {
+        return this.leftNode;
+    }
 
-  public Node setRight(Node right) {
-    this.right = right;
-    return this;
-  }
+    public Node getRightNode() {
+        return this.rightNode;
+    }
 
-  public Node setLeft(Node left) {
-    this.left = left;
-    return this;
-  }
+    public int getValue() {
+        return this.value;
+    }
 
-  public Node setValue(int value) {
-    this.value = value;
-    return this;
-  }
+    public Node setLeftNode(Node node) {
+        this.leftNode = node;
+        return this;
+    }
+
+    public Node setRightNode(Node node) {
+        this.rightNode = node;
+        return this;
+    }
+
+    public Node setValue(int value) {
+        this.value = value;
+        return this;
+    }
 }

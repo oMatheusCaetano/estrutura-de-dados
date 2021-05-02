@@ -1,14 +1,35 @@
-public class BinaryTree {
+public abstract class BinaryTree {
     private Node rootNode;
+    private int height;
+    private int balancingFactor;
 
     public BinaryTree(Node root) {
         this.setRootNode(root);
+        this.setHeight(0);
+        this.setBalancingFactor(0);
     }
 
     private String concatNodeValueToString(Node node, String string) {
         return string.length() == 0
             ? string + node.getValue()
             : string + ", " + node.getValue();
+    }
+
+    /*
+    *--------------------------------------------------------------------------
+    * Calculate tree height                                                   *
+    *--------------------------------------------------------------------------
+    */
+    public int calculateHeight() {
+        return this.calculateHeight(this.getRootNode());
+    }
+
+    private int calculateHeight(Node root) {
+        if (root == null) return 0;
+        int leftSideHeight = calculateHeight(root.getLeftNode()) + 1;
+        int rightSideHeight = calculateHeight(root.getRightNode()) + 1;
+        this.height = Math.max(leftSideHeight, rightSideHeight);
+        return this.getHeight();
     }
 
     /*
@@ -88,15 +109,32 @@ public class BinaryTree {
 
     /*
     *--------------------------------------------------------------------------
-    * Getters and Setters                                                     *
+    * Getters                                                                 *
     *--------------------------------------------------------------------------
     */
-    public Node getRootNode() {
-        return this.rootNode;
-    }
+    public Node getRootNode() { return this.rootNode; }
 
+    public int getHeight() { return this.height; }
+
+    public int getBalancingFactor() { return this.balancingFactor; }
+
+    /*
+    *--------------------------------------------------------------------------
+    * Setters                                                                 *
+    *--------------------------------------------------------------------------
+    */
     public BinaryTree setRootNode(Node root) {
         this.rootNode = root;
+        return this;
+    }
+
+    public BinaryTree setHeight(int height) {
+        this.height = height;
+        return this;
+    }
+
+    public BinaryTree setBalancingFactor(int balancingFactor) {
+        this.balancingFactor = balancingFactor;
         return this;
     }
 }
